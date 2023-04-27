@@ -27,7 +27,6 @@ function cellDifficulty(difficult, content) {
         } else {
             squareDiv.classList.add("clicked");
             point += 1;
-            console.log(point)
         }
     });
 }
@@ -39,7 +38,6 @@ function bomb(cell) {
             bombNumbers.push(randomNum);
         }
     }
-    console.log(bombNumbers);        
 }
 
 btn.addEventListener("click", function() {
