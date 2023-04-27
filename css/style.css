@@ -18,7 +18,7 @@
     width: calc(100% / 9);
     height: calc(100% / 9);
     border: 1px solid black;
-    background-color: rgb(155, 47, 243);
+    background-color: aquamarine;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,12 +28,16 @@
     width: calc(100% / 10);
     height: calc(100% / 10);
     border: 1px solid black;
-    background-color: rgb(236, 255, 127);
+    background-color: aquamarine;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .clicked {
-    background-color: rgb(238, 48, 48);
+    background-color: rgb(73, 73, 212);
+}
+
+.bomb {
+    display: none;
 }

@@ -12,11 +12,25 @@ function cellDifficulty(difficult, content) {
     });
 }
 
+function bomb(cell) {
+    if (cell === 49) {
+        let numbers = [];
+        while (numbers.length < 16) {
+            let randomNum = Math.floor(Math.random() * 49) + 1;
+            if (!numbers.includes(randomNum)) {
+                numbers.push(randomNum);
+            }
+        }
+        console.log(numbers);        
+    }
+}
+
 btn.addEventListener("click", function() {
     if (selection.value === "Easy") {
         for (let i = 1; i <= 49; i++) {
             cellDifficulty("square-easy", i);
         }
+        bomb(49);
     } else if (selection.value === "Medium") {
         for (let i = 1; i <= 81; i++) {
             cellDifficulty("square-medium", i);
