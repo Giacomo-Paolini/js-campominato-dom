@@ -14,7 +14,7 @@ function cellDifficulty(difficult, content) {
 
 btn.addEventListener("click", function() {
     if (selection.value === "Easy") {
-        for (let i = 1; i <= 100; i++) {
+        for (let i = 1; i <= 49; i++) {
             cellDifficulty("square-easy", i);
         }
     } else if (selection.value === "Medium") {
@@ -22,7 +22,7 @@ btn.addEventListener("click", function() {
             cellDifficulty("square-medium", i);
         }
     } else {
-        for (let i = 1; i <= 49; i++) {
+        for (let i = 1; i <= 100; i++) {
             cellDifficulty("square-hard", i);
         }
     }
