@@ -1,0 +1,39 @@
+.grid {
+    width: 700px;
+    height: 700px;
+    border: 2px solid black;
+}
+
+.square-easy {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 1px solid black;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square-medium {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+    border: 1px solid black;
+    background-color: rgb(155, 47, 243);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square-hard {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+    border: 1px solid black;
+    background-color: rgb(236, 255, 127);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clicked {
+    background-color: rgb(238, 48, 48);
+}
