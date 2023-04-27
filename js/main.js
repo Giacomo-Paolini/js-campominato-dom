@@ -6,14 +6,14 @@ let point = 0;
 function cellDifficulty(difficult, content) {
     const squareDiv = document.createElement("div");
     squareDiv.classList.add(difficult);
-    squareDiv.innerText = content
+    squareDiv.innerText = content;
     grid.appendChild(squareDiv);
     squareDiv.addEventListener("click", function() {
-        squareDiv.classList.toggle("clicked");
         if (bombNumbers.includes(content)) {
-            squareDiv.classList.add("bomb")
+            squareDiv.classList.add("bomb");
             alert(`Hai perso, hai totalizzato un totale di ${point}`)
         } else {
+            squareDiv.classList.add("clicked");
             point += 1;
         }
     });
