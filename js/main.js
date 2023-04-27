@@ -1,6 +1,7 @@
 const grid = document.getElementById("grid");
 const selection = document.getElementById("selection");
 const btn = document.getElementById("btn-play");
+let point = 0;
 
 function cellDifficulty(difficult, content) {
     const squareDiv = document.createElement("div");
@@ -9,7 +10,12 @@ function cellDifficulty(difficult, content) {
     grid.appendChild(squareDiv);
     squareDiv.addEventListener("click", function() {
         squareDiv.classList.toggle("clicked");
-        console.log(squareDiv)
+        if (bombNumbers.includes(content)) {
+            squareDiv.classList.add("bomb")
+            alert(`Hai perso, hai totalizzato un totale di ${point}`)
+        } else {
+            point += 1;
+        }
     });
 }
 

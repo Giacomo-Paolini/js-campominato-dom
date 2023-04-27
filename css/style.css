@@ -39,5 +39,5 @@
 }
 
 .bomb {
-    display: none;
+    background-color: red;
 }
