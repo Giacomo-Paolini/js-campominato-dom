@@ -9,20 +9,19 @@ function cellDifficulty(difficult, content) {
     grid.appendChild(squareDiv);
     squareDiv.addEventListener("click", function() {
         squareDiv.classList.toggle("clicked");
+        console.log(squareDiv)
     });
 }
 
+let bombNumbers = [];
 function bomb(cell) {
-    if (cell === 100) {
-        let numbers = [];
-        while (numbers.length < 16) {
-            let randomNum = Math.floor(Math.random() * 100) + 1;
-            if (!numbers.includes(randomNum)) {
-                numbers.push(randomNum);
-            }
+    while (bombNumbers.length < 16) {
+        let randomNum = Math.floor(Math.random() * cell) + 1;
+        if (!bombNumbers.includes(randomNum)) {
+            bombNumbers.push(randomNum);
         }
-        console.log(numbers);        
     }
+    console.log(bombNumbers);        
 }
 
 btn.addEventListener("click", function() {
@@ -35,9 +34,11 @@ btn.addEventListener("click", function() {
         for (let i = 1; i <= 81; i++) {
             cellDifficulty("square-medium", i);
         }
+        bomb(81);
     } else {
         for (let i = 1; i <= 49; i++) {
             cellDifficulty("square-hard", i);
         }
+        bomb(49);
     }
 })
